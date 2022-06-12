@@ -5,9 +5,8 @@
 --            License: GPLv3            --
 --[[----------------------------------]]--
 
--- Vimline / Eviline config for lualine
--- Author: shadmansaleh
 -- Author: elai
+-- Author: shadmansaleh
 -- Credit: glepnir
 -- Forked from : https://github.com/nvim-lualine/lualine.nvim/blob/master/examples/evil_lualine.lua
 
@@ -107,7 +106,7 @@ ins_left {
   end,
   color = function()
 
--- auto change color according to neovims mode
+-- auto change color according to neovim's mode
     local mode_color = {
       n = colors.green,
       i = colors.blue,
