@@ -21,6 +21,7 @@ set.expandtab = true                         -- Converts tabs to spaces
 set.autoindent = true                        -- Good auto indent
 set.autochdir = true                         -- Your working directory will always be the same as your working directory
 set.incsearch = true                         -- sets incremental search
+set.mouse = 'a'                              -- Enable mouse support
 set.shell = "/bin/zsh"                       -- Set your shell to bash or zsh
 set.shortmess:append "sI"                    -- Disable nvim intro
 vim.cmd [[set nobackup]]                     -- creates a backup file
@@ -29,7 +30,6 @@ vim.cmd [[set formatoptions-=cro]]           -- Stop newline continution of comm
 vim.cmd [[set complete+=kspell]]             -- auto complete with spellcheck
 vim.cmd [[set completeopt=menuone,longest]]  -- auto complete menu (It's pretty great)
 vim.cmd [[set nocompatible]]                 -- Disable compatibility to old-time vi
-set.mouse = 'a'                              -- Enable mouse support
 
 ---------------
 -- Neovim UI --
