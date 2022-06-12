@@ -5,8 +5,6 @@
 --            License: GPLv3            --
 --[[----------------------------------]]--
 
--- Author: elai
--- Author: shadmansaleh
 -- Credit: glepnir
 -- Forked from : https://github.com/nvim-lualine/lualine.nvim/blob/master/examples/evil_lualine.lua
 
