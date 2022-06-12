@@ -99,7 +99,7 @@ rm -rf ~/.local/share/nvim
 nvim
 ```
 
-* If the problem persists open an issue and i will do what i can to help.
+* If the problem persists open an [issue](https://github.com/elairavi/luavim/issues) and i will do what i can to help.
 
 ## Uninstalation
 
