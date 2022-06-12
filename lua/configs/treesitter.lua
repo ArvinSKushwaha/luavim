@@ -10,17 +10,16 @@ if not status_ok then
   return
 end
 
--- See: https://github.com/nvim-treesitter/nvim-treesitter#quickstart
+-- See plugin repo for a quickstart: https://github.com/nvim-treesitter/nvim-treesitter#quickstart
+
 nvim_treesitter.setup {
-  -- A list of parser names, or "all" or just the "maintained" ones
+-- A list of parser names, or "all" or just the "maintained" ones
   ensure_installed = {
-    'bash', 'c', 'cpp','lua','python','vim'
-    -- 'bash', 'c', 'cpp','json','lua','python','typescript','vim'
+    'bash', 'c', 'cpp','lua','python'
   },
-  -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
   highlight = {
-    -- `false` will disable the whole extension
+-- `false` will disable the whole extension
     enable = true,
   },
 }
