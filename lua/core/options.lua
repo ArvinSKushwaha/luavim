@@ -29,7 +29,7 @@ vim.cmd [[set formatoptions-=cro]]           -- Stop newline continution of comm
 vim.cmd [[set complete+=kspell]]             -- auto complete with spellcheck
 vim.cmd [[set completeopt=menuone,longest]]  -- auto complete menu (It's pretty great)
 vim.cmd [[set nocompatible]]                 -- Disable compatibility to old-time vi
--- set.mouse = 'a'                              -- Enable mouse support
+set.mouse = 'a'                              -- Enable mouse support
 
 ---------------
 -- Neovim UI --
