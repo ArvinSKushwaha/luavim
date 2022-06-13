@@ -1,6 +1,6 @@
 
 --[[-------------------------------------]]--
---      Mappings - general mappings        --
+--      keymaps - general mappings        --
 --              Author: elai               --
 --             License: GPLv3              --
 --[[-------------------------------------]]--
@@ -24,7 +24,7 @@ map ("n", "<A-j>", "<C-w>j", {})
 map ("n", "<A-k>", "<C-w>k", {})
 map ("n", "<A-l>", "<C-w>l", {})
 
--- resize current buffer by +/- 2
+-- Resize current buffer by +/- 2
 map ("n", "<C-h>", ":vertical resize +2<cr>", {})
 map ("n", "<C-j>", ":resize +2<cr>", {})
 map ("n", "<C-k>", ":resize -2<cr>", {})
@@ -69,7 +69,7 @@ map ("i", "kj", "<ESC>", {})
 -- Fix One [Car] behind
 map ("i", "<Esc>", "<Esc>`^", {})
 
--- center screen after search
+-- Center screen after search
 vim.cmd([[
 nnoremap n nzzzv
 nnoremap N Nzzzv
@@ -88,9 +88,9 @@ vnoremap <C-A-J> :m '>+1<CR>gv=gv
 vnoremap <C-A-K> :m '<-2<CR>gv=gv
 ]])
 
-----------------
--- Deprecated --
-----------------
+--------------------------------------
+-- keymaps that i don't use anymore --
+--------------------------------------
 -- -- Auto Pairs
 -- vim.cmd([[
 -- inoremap ( ()<left>
@@ -120,7 +120,7 @@ vnoremap <C-A-K> :m '<-2<CR>gv=gv
 -- -- Terminal
 -- map ("n", "<leader>t", ":vnew term://zsh<CR>", {})
 
--- -- improve scroll
+-- -- Improve scroll
 -- vim.cmd([[noremap <expr> <C-b> max([winheight(0) - 2, 1]) . "\<C-u>" . (line('.') < 1         + winheight(0) ? 'H' : 'L')
 -- noremap <expr> <C-f> max([winheight(0) - 2, 1]) . "\<C-d>" . (line('.') > line('$') - winheight(0) ? 'L' : 'H')
 -- noremap <expr> <C-y> (line('w0') <= 1         ? 'k' : "\<C-y>")
