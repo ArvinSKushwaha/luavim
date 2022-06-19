@@ -9,7 +9,7 @@
 -- General settings --
 ----------------------
 local set = vim.opt
-set.swapfile = false                         -- Don't use swapfile
+set.swapfile = true                          -- Don't use swapfile
 set.updatetime = 0                           -- Faster completion
 set.encoding="utf-8"                         -- The encoding displayed
 set.fileencoding="utf-8"                     -- The encoding written to file
@@ -19,10 +19,10 @@ set.clipboard = "unnamedplus"                -- Copy paste between vim and every
 set.smarttab = true                          -- Makes tabbing smarter will realize you have 2 vs 4
 set.expandtab = true                         -- Converts tabs to spaces
 set.autoindent = true                        -- Good auto indent
-set.autochdir = true                         -- Your working directory will always be the same as your working directory
+set.autochdir = false                        -- Your working directory will always be the same as your working directory
 set.incsearch = true                         -- sets incremental search
 set.mouse = 'a'                              -- Enable mouse support
-set.shell = "/bin/zsh"                       -- Set your shell to bash or zsh
+set.shell = "/bin/fish"                      -- Set your shell to bash or zsh
 set.shortmess:append "sI"                    -- Disable nvim intro
 vim.cmd [[set nobackup]]                     -- creates a backup file
 vim.cmd [[set nowritebackup]]                -- creates a backup file i guess
@@ -39,7 +39,7 @@ set.ruler = true              	             -- Show the cursor position all the 
 set.splitbelow = true                        -- Horizontal splits will automatically be below
 set.splitright = true                        -- Vertical splits will automatically be to the right
 set.conceallevel = 0                         -- So that I can see `` in markdown files
-set.tabstop = 2                              -- Insert 2 spaces for a tab
+set.tabstop = 4                              -- Insert 4 spaces for a tab
 set.number = true                            -- Line numbers
 set.background = "dark"                      -- tell vim what the background color looks like
 set.virtualedit = "onemore"                  -- With This option you can move the cursor one character over the end
@@ -50,7 +50,7 @@ set.laststatus=3                             -- Always display the status line
 set.title = true                             -- Show current txt that you editing
 set.relativenumber = false                   -- Vim’s absolute, relative and hybrid line numbers
 set.cursorline = true                        -- Enable highlighting of the current line
-set.shiftwidth = 2                           -- Change the number of space characters inserted for indentation
+set.shiftwidth = 4                           -- Change the number of space characters inserted for indentation
 set.showtabline = 1                          -- Always show tabs
 set.cmdheight = 1                            -- More space for displaying messages
 set.numberwidth = 5                          -- set number column width to 2 {default 4}

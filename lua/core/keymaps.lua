@@ -1,9 +1,8 @@
-
---[[-------------------------------------]]--
+--[[-------------------------------------]] --
 --      keymaps - general mappings        --
 --              Author: elai               --
 --             License: GPLv3              --
---[[-------------------------------------]]--
+--[[-------------------------------------]] --
 
 -- Shorten function name
 local map = vim.api.nvim_set_keymap
@@ -19,55 +18,79 @@ vim.g.maplocalleader = " "
 -- Normal Mode --
 -----------------
 -- Mappings for moving through splits
-map ("n", "<A-h>", "<C-w>h", {})
-map ("n", "<A-j>", "<C-w>j", {})
-map ("n", "<A-k>", "<C-w>k", {})
-map ("n", "<A-l>", "<C-w>l", {})
+map("n", "<A-h>", "<C-w>h", {})
+map("n", "<A-j>", "<C-w>j", {})
+map("n", "<A-k>", "<C-w>k", {})
+map("n", "<A-l>", "<C-w>l", {})
 
 -- Resize current buffer by +/- 2
-map ("n", "<C-h>", ":vertical resize +2<cr>", {})
-map ("n", "<C-j>", ":resize +2<cr>", {})
-map ("n", "<C-k>", ":resize -2<cr>", {})
-map ("n", "<C-l>", ":vertical resize -2<cr>", {})
+map("n", "<C-w><C-h>", ":vertical resize +2<cr>", {})
+map("n", "<C-w><C-j>", ":resize +2<cr>", {})
+map("n", "<C-w><C-k>", ":resize -2<cr>", {})
+map("n", "<C-w><C-l>", ":vertical resize -2<cr>", {})
 
 -- Alternate way to save and quit nvim
-map ("n", "<A-w>", ":w<CR>", {}) -- save file
-map ("n", "<A-q>", ":q<CR>", {}) -- quit nvim
-map ("n", "<A-1>", ":q!<CR>",{}) -- quit without saving
+map("n", "<A-w>", ":w<CR>", {}) -- save file
+map("n", "<A-q>", ":q<CR>", {}) -- quit nvim
+map("n", "<A-1>", ":q!<CR>", {}) -- quit without saving
 
 -- Nvim Comment
-map ("n", "<leader>c", ":CommentToggle<CR>", {})       -- Comment One Line
-map ("x", "<leader>c", ":'<,'>CommentToggle<CR>", {})  -- Comment Multiple Lines In Visual Mode
-map ("n", "<leader>p", "vip:CommentToggle<CR>", {})    -- Comment A Paragraph
+map("n", "<C-l>", ":CommentToggle<CR>", {}) -- Comment One Line
+map("x", "<C-l>", ":'<,'>CommentToggle<CR>", {}) -- Comment Multiple Lines In Visual Mode
+map("n", "<C-l><C-p>", "vip:CommentToggle<CR>", {}) -- Comment A Paragraph
 
 -- Don't accidently create macros when trying to quit
-map ('n', 'Q', 'q', {})
-map ('n', 'q', '<nop>', {})
+map('n', 'Q', 'q', {})
+map('n', 'q', '<nop>', {})
+
+-- Delete without copying to buffer
+map('n', "<leader>d", "\"_d", {})
+map('x', "<leader>d", "\"_d", {})
+
+-- Crates Config
+map('n', "<leader>cv", ":lua require('crates').show_versions_popup()<cr>", {})
+map('n', "<leader>cf", ":lua require('crates').show_features_popup()<cr>", {})
+map('n', "<leader>cD", ":lua require('crates').open_documentation()<cr>", {})
 
 -- GitSings mappings
-map ('n', "<leader>h", ":Gitsigns preview_hunk<CR>", {})  -- preview_hunk
-map ('n', "<leader>r", ":Gitsigns reset_buffer<CR>", {})  -- reset_buffer
+-- map ('n', "<leader>h", ":Gitsigns preview_hunk<CR>", {})  -- preview_hunk
+-- map ('n', "<leader>r", ":Gitsigns reset_buffer<CR>", {})  -- reset_buffer
 
 -- Toggle Alpha Dashboard
-map ('n', "<leader>a", ":set laststatus=3<CR> | :Alpha<CR>", {})
+map('n', "<leader>a", ":set laststatus=3<CR> | :Alpha<CR>", {})
 
 -- Toggle NvimTree
-map ("n", "<leader>n", ":NvimTreeToggle<CR>", {})
+map("n", "<leader>n", ":CHADopen<CR>", {})
 
 -- Yank entire line
-map ("n", "yie", ":<C-u>%y<CR>", {})
+map("n", "yie", ":<C-u>%y<CR>", {})
 
 -- Packer Update
-map ("n", "<leader>u", ":PackerSync<CR>", {})
+map("n", "<leader>u", ":PackerSync<CR>", {})
+
+-- Toggle Terminal
+map("n", "<leader>t", ":ToggleTerm<CR>", {})
+
+-- Telescope
+map("n", "<leader>T", ":Telescope<CR>", {})
+map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", {})
+map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", {})
+map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", {})
+map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", {})
+map("n", "<leader>fs", "<cmd>Telescope grep_string<cr>", {})
+
+
+-- Markdown Preview
+map("n", "<leader>m", ":MarkdownPreviewToggle<cr>", {})
 
 -----------------
 -- Insert Mode --
 -----------------
 -- Map Escape Key To kj
-map ("i", "kj", "<ESC>", {})
+map("i", "kj", "<ESC>", {})
 
 -- Fix One [Car] behind
-map ("i", "<Esc>", "<Esc>`^", {})
+map("i", "<Esc>", "<Esc>`^", {})
 
 -- Center screen after search
 vim.cmd([[
