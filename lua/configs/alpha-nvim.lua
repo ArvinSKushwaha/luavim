@@ -1,14 +1,13 @@
-
---[[--------------------------------------]]--
+--[[--------------------------------------]] --
 --        alpha-nvim - welcome screen       --
 --               Author: elai               --
 --              License: GPLv3              --
---[[--------------------------------------]]--
+--[[--------------------------------------]] --
 
 -- Call Alpha With A pcall
 local status_ok, alpha = pcall(require, "alpha")
 if not status_ok then
-	return
+    return
 end
 
 -- Enable Alpha Dashboard
@@ -22,49 +21,49 @@ vim.cmd [[ au User AlphaReady if winnr('$') == 1 | set laststatus=1 ]]
 
 -- Custom Footer
 dashboard.section.footer.val = {
-  "Write Programs That Do One Thing And Do It Well.",
+    "Write Programs That Do One Thing And Do It Well.",
 }
 
 -- Custom Section
 dashboard.section.buttons.val = {
-	dashboard.button("n", "  Create New file",       ":set laststatus=3 | :ene <BAR> startinsert <CR>"),
-	dashboard.button("e", "  Open File Explorer",    ":set laststatus=3 | :NvimTreeOpen <CR>"),
-  dashboard.button("v", "  Neovim Settings ",      ":set laststatus=3 | e ~/.config/nvim/init.lua <CR>"),
- 	-- dashboard.button("b", "  Edit Bspwm Tree",       ":set laststatus=3 | e ~/.config/bspwm <CR>"),
-	-- dashboard.button("s", "  Shell Configuration",   ":set laststatus=3 | e ~/.config/zsh/.zshrc <CR>"),
-	dashboard.button("u", "  Update Nvim Plugins",   ":PackerSync <CR>"),
-	dashboard.button("q", "  Quit Neovim",           ":qa<CR>"),
+    dashboard.button("n", "  Create New file", ":set laststatus=3 | :ene <BAR> startinsert <CR>"),
+    dashboard.button("e", "  Open File Explorer", ":set laststatus=3 | :CHADopen <CR>"),
+    dashboard.button("v", "  Neovim Settings ", ":set laststatus=3 | e ~/.config/nvim/init.lua <CR>"),
+    -- dashboard.button("b", "  Edit Bspwm Tree",       ":set laststatus=3 | e ~/.config/bspwm <CR>"),
+    -- dashboard.button("s", "  Shell Configuration",   ":set laststatus=3 | e ~/.config/zsh/.zshrc <CR>"),
+    dashboard.button("u", "  Update Nvim Plugins", ":PackerSync <CR>"),
+    dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
 }
 
 -- LuaVim Ascii Art
-dashboard.section.header.val = {
-  [[██╗     ██╗   ██╗  █████╗  ██╗   ██╗ ██╗ ███╗   ███╗]],
-  [[██║     ██║   ██║ ██╔══██╗ ██║   ██║ ██║ ████╗ ████║]],
-  [[██║     ██║   ██║ ███████║ ██║   ██║ ██║ ██╔████╔██║]],
-  [[██║     ██║   ██║ ██╔══██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║]],
-  [[███████╗╚██████╔╝ ██║  ██║  ╚████╔╝  ██║ ██║ ╚═╝ ██║]],
-  [[╚══════╝ ╚═════╝  ╚═╝  ╚═╝   ╚═══╝   ╚═╝ ╚═╝     ╚═╝]],
-}
+-- dashboard.section.header.val = {
+--     [[██╗     ██╗   ██╗  █████╗  ██╗   ██╗ ██╗ ███╗   ███╗]],
+--     [[██║     ██║   ██║ ██╔══██╗ ██║   ██║ ██║ ████╗ ████║]],
+--     [[██║     ██║   ██║ ███████║ ██║   ██║ ██║ ██╔████╔██║]],
+--     [[██║     ██║   ██║ ██╔══██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║]],
+--     [[███████╗╚██████╔╝ ██║  ██║  ╚████╔╝  ██║ ██║ ╚═╝ ██║]],
+--     [[╚══════╝ ╚═════╝  ╚═╝  ╚═╝   ╚═══╝   ╚═╝ ╚═╝     ╚═╝]],
+-- }
 
 -- Layout For Luavim ascii art
 dashboard.config.layout = {
-  { type = "padding", val = 5 },
-  dashboard.section.header,
-  { type = "padding", val = 2 },
-  dashboard.section.buttons,
-  { type = "padding", val = 1 },
-  dashboard.section.footer,
+    { type = "padding", val = 5 },
+    dashboard.section.header,
+    { type = "padding", val = 2 },
+    dashboard.section.buttons,
+    { type = "padding", val = 1 },
+    dashboard.section.footer,
 }
 
 -- -- Neovim ascii art
--- dashboard.section.header.val = {
---   [[███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗]],
---   [[████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║]],
---   [[██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║]],
---   [[██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║]],
---   [[██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║]],
---   [[╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝]],
--- }
+dashboard.section.header.val = {
+  [[███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗]],
+  [[████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║]],
+  [[██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║]],
+  [[██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║]],
+  [[██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║]],
+  [[╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝]],
+}
 
 -- -- Layout For Neovim ascii art
 -- dashboard.config.layout = {
