@@ -48,7 +48,7 @@ packer.init {
 return packer.startup(function(use)
 
     -- My plugins
-    -- use 'folke/tokyonight.nvim' -- Provides the tokyonight theme.
+    use 'folke/tokyonight.nvim' -- Provides the tokyonight theme.
     use({
         "catppuccin/nvim",
         as = "catppuccin"
@@ -68,11 +68,10 @@ return packer.startup(function(use)
             require('crates').setup()
         end,
     }
-    use 'iamcco/markdown-preview.nvim'
-    use {
-        'glacambre/firenvim',
-        run = function() vim.fn['firenvim#install'](0) end
-    }
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
 
     -- Git integration for buffers
     use {
@@ -84,6 +83,7 @@ return packer.startup(function(use)
     }
 
     use "wbthomason/packer.nvim" -- A use-package inspired plugin manager for Neovim
+    use 'shaunsingh/nord.nvim' -- Nord Theme
     -- use "kyazdani42/nvim-web-devicons" -- Lua fork of vim-web-devicons for neovim
     -- use "kyazdani42/nvim-tree.lua" -- A file explorer tree for neovim written in lua
     use { 'ms-jpq/chadtree', branch = 'chad', run = 'python3 -m chadtree deps' }

@@ -35,7 +35,7 @@ local on_attach = function(client, bufnr)
 
     -- Mappings.
     -- See `:help vim.lsp.*` for documentation on any of the below functions
-    local bufopts = { noremap = true, silent = false, buffer = bufnr }
+    -- local bufopts = { noremap = true, silent = false, buffer = bufnr }
 end
 
 lsp_installer.setup {
@@ -60,25 +60,40 @@ local lspconfig = require('lspconfig')
 -- local coq = require('coq')
 
 lsps.jdtls = {
-    java = {
-        signatureHelp = {
-            enabled = true
+    settings = {
+        java = {
+            signatureHelp = {
+                enabled = true
+            }
         }
     }
 }
 
-
--- lsps.clangd = {
---     cmd = "clangd -style=\"{IndentWidth: 4}\"",
--- }
-
+lsps.rust_analyzer = {
+    settings = {
+        ['rust-analyzer'] = {
+            checkOnSave = {
+                command = "clippy",
+            }
+        }
+    }
+}
 
 for name, config in pairs(lsps) do
-    -- config.on_attach = on_attach
-    lspconfig[name].setup(config)
-end
+    config.on_attach = on_attach
+    if name == "rust_analyzer" then
+        local ok_rt, rust_tools = pcall(require, "rust-tools")
+        if ok_rt then
+            rust_tools.setup({
+                server = config
+            })
+            goto continue
+        end
+    end
 
-require('rust-tools').setup()
+    lspconfig[name].setup(config)
+    ::continue::
+end
 
 require('crates').setup({
 })

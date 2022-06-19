@@ -28,7 +28,6 @@ local core_modules = {
  "configs/lsp_configuration",   -- LSP Configurations
  "configs/discord_config",      -- Discord RPC management
  "configs/telescope_config",    -- Telescope configuration
- "configs/markdown_preview",    -- Markdown Preview
 
 ---- Other Utilities --------------------------------
  "utils/vstuff",           -- Other Stuff

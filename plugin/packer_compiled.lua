@@ -110,11 +110,6 @@ _G.packer_plugins = {
     path = "/home/arvinsk/.local/share/nvim/site/pack/packer/start/crates.nvim",
     url = "https://github.com/saecki/crates.nvim"
   },
-  firenvim = {
-    loaded = true,
-    path = "/home/arvinsk/.local/share/nvim/site/pack/packer/start/firenvim",
-    url = "https://github.com/glacambre/firenvim"
-  },
   ["fuzzy.nvim"] = {
     loaded = true,
     path = "/home/arvinsk/.local/share/nvim/site/pack/packer/start/fuzzy.nvim",
@@ -152,6 +147,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/arvinsk/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
     url = "https://github.com/karb94/neoscroll.nvim"
+  },
+  ["nord.nvim"] = {
+    loaded = true,
+    path = "/home/arvinsk/.local/share/nvim/site/pack/packer/start/nord.nvim",
+    url = "https://github.com/shaunsingh/nord.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -217,6 +217,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/arvinsk/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/arvinsk/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
   }
 }
 
@@ -229,8 +234,8 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au CursorMoved * ++once lua require("packer.load")({'gitsigns.nvim'}, { event = "CursorMoved *" }, _G.packer_plugins)]]
 vim.cmd [[au CursorMovedI * ++once lua require("packer.load")({'gitsigns.nvim'}, { event = "CursorMovedI *" }, _G.packer_plugins)]]
+vim.cmd [[au CursorMoved * ++once lua require("packer.load")({'gitsigns.nvim'}, { event = "CursorMoved *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end
