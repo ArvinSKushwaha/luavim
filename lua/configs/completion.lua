@@ -55,6 +55,7 @@ cmp.setup {
     snippet = {
         expand = function(args)
             luasnip.lsp_expand(args.body) -- For `luasnip` users.
+            -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
         end,
     },
     mapping = {

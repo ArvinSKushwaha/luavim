@@ -68,3 +68,16 @@ set.timeoutlen = 500                         -- By default timeoutlen is 1000 ms
 set.lazyredraw = true                        -- Disable lazyredraw
 set.synmaxcol = 240                          -- Max column for syntax highlight
 set.updatetime = 700                         -- ms to wait for trigger an event
+
+
+-----------------
+--    Python   --
+-----------------
+vim.g.python3_host_prog = '/usr/bin/python3' -- Set python path
+
+-----------------
+--   Folding   --
+-----------------
+set.foldmethod = "expr"
+set.foldexpr = "nvim_treesitter#foldexpr()"
+set.foldenable = false

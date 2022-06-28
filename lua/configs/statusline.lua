@@ -9,10 +9,12 @@
 
 local lualine = require('lualine')
 
+
 -- Color table for highlights
 -- stylua: ignore
 local colors = {
-    bg       = '#0c1014',
+    -- bg       = '#0c1014',
+    bg       = '#000000',
     fg       = '#bbc2cf',
     yellow   = '#ECBE7B',
     cyan     = '#008080',
@@ -79,7 +81,7 @@ local config = {
         'fzf',
         'toggleterm',
         'symbols-outline',
-    }
+    },
 }
 
 -- Inserts a component in lualine_c at left section
@@ -215,3 +217,6 @@ lualine.setup(config)
 
 -- Set one statusline on all buffers
 vim.opt.laststatus = 3
+
+
+require('tabby').setup()

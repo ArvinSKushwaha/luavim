@@ -84,7 +84,7 @@ return packer.startup(function(use)
 
     use "wbthomason/packer.nvim" -- A use-package inspired plugin manager for Neovim
     use 'shaunsingh/nord.nvim' -- Nord Theme
-    -- use "kyazdani42/nvim-web-devicons" -- Lua fork of vim-web-devicons for neovim
+    use "kyazdani42/nvim-web-devicons" -- Lua fork of vim-web-devicons for neovim
     -- use "kyazdani42/nvim-tree.lua" -- A file explorer tree for neovim written in lua
     use { 'ms-jpq/chadtree', branch = 'chad', run = 'python3 -m chadtree deps' }
     use "nvim-treesitter/nvim-treesitter" -- Treesitter Syntax highlighting and abstraction layer
@@ -98,12 +98,16 @@ return packer.startup(function(use)
     use 'hrsh7th/cmp-nvim-lsp' -- Nvim-cmp source for LSP
     -- use 'github/copilot.vim' -- Copilot
     -- use 'hrsh7th/cmp-copilot' -- Nvim-cmo source for Copilot
-    use "L3MON4D3/LuaSnip" -- Snippet Engine for Neovim written in Lua
+    use 'L3MON4D3/LuaSnip'
+    use 'saadparwaiz1/cmp_luasnip'
     use "lewis6991/impatient.nvim" -- Speed up loading Lua modules to improve startup time
     use "karb94/neoscroll.nvim" -- Smooth scrolling plugin written in lua
 
     use { 'romgrk/fzy-lua-native', run = 'make' }
     use { 'tzachar/cmp-fuzzy-buffer', requires = { 'hrsh7th/nvim-cmp', 'tzachar/fuzzy.nvim' } }
+
+    use 'hjson/vim-hjson'
+    use 'nanozuki/tabby.nvim'
 
     -- use { 'ms-jpq/coq_nvim', { branch = 'coq' } } -- Completion plugin
     -- use { 'ms-jpq/coq.artifacts', { branch = 'artifacts' } }

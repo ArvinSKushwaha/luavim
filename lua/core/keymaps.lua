@@ -40,8 +40,8 @@ map("x", "<C-l>", ":'<,'>CommentToggle<CR>", {}) -- Comment Multiple Lines In Vi
 map("n", "<C-l><C-p>", "vip:CommentToggle<CR>", {}) -- Comment A Paragraph
 
 -- Don't accidently create macros when trying to quit
-map('n', 'Q', 'q', {})
-map('n', 'q', '<nop>', {})
+-- map('n', 'Q', 'q', {})
+-- map('n', 'q', '<nop>', {})
 
 -- Delete without copying to buffer
 map('n', "<leader>d", "\"_d", {})

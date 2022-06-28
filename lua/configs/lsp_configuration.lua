@@ -21,7 +21,7 @@ vim.keymap.set('n', '<leader>wl', function()
 end, bufopts)
 vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, bufopts)
 vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
-vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
+vim.keymap.set('n', '<leader>c', vim.lsp.buf.code_action, bufopts)
 vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
 vim.keymap.set('n', '<leader>f', vim.lsp.buf.formatting, bufopts)
 
@@ -53,6 +53,7 @@ local lsps = {
     ['taplo'] = {},
     ['html'] = {},
     ['jdtls'] = {},
+    ['gopls'] = {},
 }
 
 
@@ -74,6 +75,13 @@ lsps.rust_analyzer = {
         ['rust-analyzer'] = {
             checkOnSave = {
                 command = "clippy",
+            },
+            inlayHints = {
+                bindingModeHints = { enable = true },
+                chainingHints = { enable = true },
+                closingBraceHints = { enable = true },
+                closureReturnTypeHints = { enable = "always" },
+                lifetimeElisonHints = { enable = "always" },
             }
         }
     }
