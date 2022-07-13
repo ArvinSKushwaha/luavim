@@ -54,6 +54,8 @@ local lsps = {
     ['html'] = {},
     ['jdtls'] = {},
     ['gopls'] = {},
+    ['yamlls'] = {},
+    ['emmet_ls'] = {},
 }
 
 
@@ -82,6 +84,10 @@ lsps.rust_analyzer = {
                 closingBraceHints = { enable = true },
                 closureReturnTypeHints = { enable = "always" },
                 lifetimeElisonHints = { enable = "always" },
+            },
+            -- rust-analyzer.cargo.unsetTest
+            cargo = {
+                unsetTest = {'tokio', 'tokio-macros'}
             }
         }
     }

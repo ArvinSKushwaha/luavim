@@ -74,10 +74,10 @@ map("n", "<leader>t", ":ToggleTerm<CR>", {})
 -- Telescope
 map("n", "<leader>T", ":Telescope<CR>", {})
 map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", {})
-map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", {})
 map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", {})
 map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", {})
 map("n", "<leader>fs", "<cmd>Telescope grep_string<cr>", {})
+map("n", "<leader>fS", "<cmd>Telescope lsp_document_symbols<cr>", {})
 
 
 -- Markdown Preview

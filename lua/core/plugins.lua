@@ -102,6 +102,7 @@ return packer.startup(function(use)
     use 'saadparwaiz1/cmp_luasnip'
     use "lewis6991/impatient.nvim" -- Speed up loading Lua modules to improve startup time
     use "karb94/neoscroll.nvim" -- Smooth scrolling plugin written in lua
+    use "tpope/vim-fugitive"
 
     use { 'romgrk/fzy-lua-native', run = 'make' }
     use { 'tzachar/cmp-fuzzy-buffer', requires = { 'hrsh7th/nvim-cmp', 'tzachar/fuzzy.nvim' } }
