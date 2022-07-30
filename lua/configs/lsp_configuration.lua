@@ -56,6 +56,7 @@ local lsps = {
     ['gopls'] = {},
     ['yamlls'] = {},
     ['emmet_ls'] = {},
+    ['texlab'] = {},
 }
 
 
@@ -112,4 +113,4 @@ end
 require('crates').setup({
 })
 
-vim.lsp.set_log_level("debug")
+vim.lsp.set_log_level("warn")
