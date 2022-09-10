@@ -96,8 +96,8 @@ return packer.startup(function(use)
     use "hrsh7th/nvim-cmp" -- completion plugin for neovim coded in Lua
     use "hrsh7th/cmp-path" -- Nvim-cmp source for path
     use 'hrsh7th/cmp-nvim-lsp' -- Nvim-cmp source for LSP
-    -- use 'github/copilot.vim' -- Copilot
-    -- use 'hrsh7th/cmp-copilot' -- Nvim-cmo source for Copilot
+    use 'github/copilot.vim' -- Copilot
+    use 'hrsh7th/cmp-copilot' -- Nvim-cmo source for Copilot
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
     use "lewis6991/impatient.nvim" -- Speed up loading Lua modules to improve startup time

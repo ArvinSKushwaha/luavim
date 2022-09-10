@@ -52,8 +52,6 @@ local lsps = {
     ['marksman'] = {},
     ['taplo'] = {},
     ['html'] = {},
-    ['jdtls'] = {},
-    ['gopls'] = {},
     ['yamlls'] = {},
     ['emmet_ls'] = {},
     ['texlab'] = {},
@@ -61,17 +59,6 @@ local lsps = {
 
 
 local lspconfig = require('lspconfig')
--- local coq = require('coq')
-
-lsps.jdtls = {
-    settings = {
-        java = {
-            signatureHelp = {
-                enabled = true
-            }
-        }
-    }
-}
 
 lsps.rust_analyzer = {
     settings = {
@@ -113,4 +100,4 @@ end
 require('crates').setup({
 })
 
-vim.lsp.set_log_level("warn")
+-- vim.lsp.set_log_level("debug")
