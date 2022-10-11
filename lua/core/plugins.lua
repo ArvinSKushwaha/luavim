@@ -54,7 +54,8 @@ return packer.startup(function(use)
         as = "catppuccin"
     })
     use 'neovim/nvim-lspconfig' -- Configures NeoVim LSP
-    use 'williamboman/nvim-lsp-installer' -- Installer for LSPs
+    use { "williamboman/mason.nvim" }
+    use { "williamboman/mason-lspconfig.nvim" } -- Installer for LSPs
     use 'nvim-telescope/telescope.nvim' -- Telescope for Nvim
     use 'nvim-lua/plenary.nvim' -- plenary, a dependency of telescope
     use 'andweeb/presence.nvim' -- Discord RPC manager

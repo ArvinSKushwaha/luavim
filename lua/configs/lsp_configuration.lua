@@ -23,9 +23,7 @@ vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, bufopts)
 vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
 vim.keymap.set('n', '<leader>c', vim.lsp.buf.code_action, bufopts)
 vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-vim.keymap.set('n', '<leader>f', vim.lsp.buf.formatting, bufopts)
-
-local lsp_installer = require("nvim-lsp-installer")
+vim.keymap.set('n', '<leader>f', vim.lsp.buf.format, bufopts)
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -38,8 +36,29 @@ local on_attach = function(client, bufnr)
     -- local bufopts = { noremap = true, silent = false, buffer = bufnr }
 end
 
-lsp_installer.setup {
-    automatic_installation = true
+require("mason").setup {
+    ui = {
+        icons = {
+            package_installed = "✓"
+        }
+    }
+}
+
+require("mason-lspconfig").setup {
+    ensure_installed = {
+        'pyright',
+        'tsserver',
+        'rust_analyzer',
+        'sumneko_lua',
+        'clangd',
+        'cmake',
+        'marksman',
+        'taplo',
+        'html',
+        'yamlls',
+        'emmet_ls',
+        'texlab',
+    }
 }
 
 local lsps = {
@@ -97,7 +116,6 @@ for name, config in pairs(lsps) do
     ::continue::
 end
 
-require('crates').setup({
-})
+require('crates').setup({ })
 
 -- vim.lsp.set_log_level("debug")
