@@ -22,7 +22,7 @@ set.autoindent = true                        -- Good auto indent
 set.autochdir = false                        -- Your working directory will always be the same as your working directory
 set.incsearch = true                         -- sets incremental search
 set.mouse = 'a'                              -- Enable mouse support
-set.shell = "/bin/fish"                      -- Set your shell to bash or zsh
+set.shell = "/bin/bash"                      -- Set your shell to bash or zsh
 set.shortmess:append "sI"                    -- Disable nvim intro
 vim.cmd [[set nobackup]]                     -- creates a backup file
 vim.cmd [[set nowritebackup]]                -- creates a backup file i guess
