@@ -83,6 +83,9 @@ map("n", "<leader>fS", "<cmd>Telescope lsp_document_symbols<cr>", {})
 -- Markdown Preview
 map("n", "<leader>m", ":MarkdownPreviewToggle<cr>", {})
 
+-- Tagbar
+map("n", "<leader>o", ":TagbarToggle<cr>", {})
+
 -----------------
 -- Insert Mode --
 -----------------

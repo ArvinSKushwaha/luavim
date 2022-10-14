@@ -248,6 +248,11 @@ _G.packer_plugins = {
     path = "/home/arvinsk/.local/share/nvim/site/pack/packer/start/tabby.nvim",
     url = "https://github.com/nanozuki/tabby.nvim"
   },
+  tagbar = {
+    loaded = true,
+    path = "/home/arvinsk/.local/share/nvim/site/pack/packer/start/tagbar",
+    url = "https://github.com/preservim/tagbar"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/arvinsk/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -279,8 +284,8 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au CursorMovedI * ++once lua require("packer.load")({'gitsigns.nvim'}, { event = "CursorMovedI *" }, _G.packer_plugins)]]
 vim.cmd [[au CursorMoved * ++once lua require("packer.load")({'gitsigns.nvim'}, { event = "CursorMoved *" }, _G.packer_plugins)]]
+vim.cmd [[au CursorMovedI * ++once lua require("packer.load")({'gitsigns.nvim'}, { event = "CursorMovedI *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 
