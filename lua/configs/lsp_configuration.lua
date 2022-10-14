@@ -94,7 +94,7 @@ lsps.rust_analyzer = {
             },
             -- rust-analyzer.cargo.unsetTest
             cargo = {
-                unsetTest = {'tokio', 'tokio-macros'}
+                unsetTest = { 'tokio', 'tokio-macros' }
             }
         }
     }
@@ -116,6 +116,6 @@ for name, config in pairs(lsps) do
     ::continue::
 end
 
-require('crates').setup({ })
+require('crates').setup({})
 
 -- vim.lsp.set_log_level("debug")
