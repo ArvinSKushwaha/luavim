@@ -124,7 +124,7 @@ cmp.setup {
         { name = "fuzzy_buffer" },
         { name = "path" },
         { name = "crates" },
-        -- { name = "copilot" },
+        { name = "copilot" },
     },
     confirm_opts = {
         behavior = cmp.ConfirmBehavior.Replace,
