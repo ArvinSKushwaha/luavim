@@ -23,7 +23,7 @@ vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, bufopts)
 vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
 vim.keymap.set('n', '<leader>c', vim.lsp.buf.code_action, bufopts)
 vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-vim.keymap.set('n', '<leader>f', vim.lsp.buf.format, bufopts)
+vim.keymap.set('n', '<leader>f', vim.lsp.buf.formatting, bufopts)
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
