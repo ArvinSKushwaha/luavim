@@ -133,6 +133,14 @@ end
 
 ins_right { 'diff', source = diff_source }
 
+local lsp_status = require('lsp-status')
+
+ins_right {
+    "require'lsp-status'.status()",
+    color = { fg = colors.green },
+    padding = { left = 1, right = 0 },
+}
+
 -- Git Branch
 ins_right {
     'branch',
@@ -219,4 +227,4 @@ lualine.setup(config)
 vim.opt.laststatus = 3
 
 
-require('tabby').setup()
+-- require('tabby').setup()

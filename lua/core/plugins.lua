@@ -48,6 +48,7 @@ packer.init {
 return packer.startup(function(use)
 
     -- My plugins
+    use "nvim-lua/lsp-status.nvim" -- Lsp Progress
     use 'folke/tokyonight.nvim' -- Provides the tokyonight theme.
     use({
         "catppuccin/nvim",
@@ -87,8 +88,8 @@ return packer.startup(function(use)
     use "wbthomason/packer.nvim" -- A use-package inspired plugin manager for Neovim
     use 'shaunsingh/nord.nvim' -- Nord Theme
     use "kyazdani42/nvim-web-devicons" -- Lua fork of vim-web-devicons for neovim
-    -- use "kyazdani42/nvim-tree.lua" -- A file explorer tree for neovim written in lua
-    use { 'ms-jpq/chadtree', branch = 'chad', run = 'python3 -m chadtree deps' }
+    use "kyazdani42/nvim-tree.lua" -- A file explorer tree for neovim written in lua
+    -- use { 'ms-jpq/chadtree', branch = 'chad', run = 'python3 -m chadtree deps' }
     use "nvim-treesitter/nvim-treesitter" -- Treesitter Syntax highlighting and abstraction layer
     use "nvim-lualine/lualine.nvim" -- Fast and easy statusline for neovim
     use "goolord/alpha-nvim" -- lua powered greeter like vim-startify / dashboard-nvim
@@ -110,7 +111,9 @@ return packer.startup(function(use)
     use { 'tzachar/cmp-fuzzy-buffer', requires = { 'hrsh7th/nvim-cmp', 'tzachar/fuzzy.nvim' } }
 
     use 'hjson/vim-hjson'
-    use 'nanozuki/tabby.nvim'
+    -- use 'nanozuki/tabby.nvim'
+    use 'lervag/vimtex'
+
 
     -- use { 'ms-jpq/coq_nvim', { branch = 'coq' } } -- Completion plugin
     -- use { 'ms-jpq/coq.artifacts', { branch = 'artifacts' } }

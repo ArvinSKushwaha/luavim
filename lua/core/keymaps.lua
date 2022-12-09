@@ -60,7 +60,7 @@ map('n', "<leader>cD", ":lua require('crates').open_documentation()<cr>", {})
 map('n', "<leader>a", ":set laststatus=3<CR> | :Alpha<CR>", {})
 
 -- Toggle NvimTree
-map("n", "<leader>n", ":CHADopen<CR>", {})
+map("n", "<leader>n", ":NvimTreeToggle<CR>", {})
 
 -- Yank entire line
 map("n", "yie", ":<C-u>%y<CR>", {})
@@ -100,6 +100,11 @@ vim.cmd([[
 nnoremap n nzzzv
 nnoremap N Nzzzv
 ]])
+
+-- Move End of Line
+map("i", "<C-e>", "<End>", {})
+-- Move Beginning of Line
+map("i", "<C-a>", "<Home>", {})
 
 -----------------
 -- Visual Mode --
@@ -164,3 +169,19 @@ vnoremap <C-A-K> :m '<-2<CR>gv=gv
 -- map ("n", "o<Leader>8", "<Plug>lightline#bufferline#go(8)", {})
 -- map ("n", "o<Leader>9", "<Plug>lightline#bufferline#go(9)", {})
 -- map ("n", "o<Leader>0", "<Plug>lightline#bufferline#go(10)", {})
+
+map("n", "h", "gh", {})
+map("n", "h", "gj", {})
+map("n", "h", "gk", {})
+map("n", "h", "gl", {})
+
+map("s", "h", "gh", {})
+map("s", "j", "gj", {})
+map("s", "k", "gk", {})
+map("s", "l", "gl", {})
+
+map("v", "h", "gh", {})
+map("v", "j", "gj", {})
+map("v", "k", "gk", {})
+map("v", "l", "gl", {})
+

@@ -27,7 +27,7 @@ dashboard.section.footer.val = {
 -- Custom Section
 dashboard.section.buttons.val = {
     dashboard.button("n", "  Create New file", ":set laststatus=3 | :ene <BAR> startinsert <CR>"),
-    dashboard.button("e", "  Open File Explorer", ":set laststatus=3 | :CHADopen <CR>"),
+    dashboard.button("e", "  Open File Explorer", ":set laststatus=3 | :NvimTreeToggle<CR>"),
     dashboard.button("v", "  Neovim Settings ", ":set laststatus=3 | e ~/.config/nvim/init.lua <CR>"),
     -- dashboard.button("b", "  Edit Bspwm Tree",       ":set laststatus=3 | e ~/.config/bspwm <CR>"),
     -- dashboard.button("s", "  Shell Configuration",   ":set laststatus=3 | e ~/.config/zsh/.zshrc <CR>"),

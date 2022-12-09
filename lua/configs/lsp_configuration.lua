@@ -1,3 +1,5 @@
+local lsp_status = require('lsp-status')
+
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap = true, silent = true }
@@ -25,11 +27,24 @@ vim.keymap.set('n', '<leader>c', vim.lsp.buf.code_action, bufopts)
 vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
 vim.keymap.set('n', '<leader>f', vim.lsp.buf.format, bufopts)
 
+lsp_status.config({
+    indicator_errors = ' ',
+    indicator_warnings = ' ',
+    indicator_info = ' ',
+    indicator_hint = ' ',
+    indicator_ok = ' ',
+    show_filename = false,
+    current_function = true,
+})
+
+lsp_status.register_progress()
+
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
     -- Enable completion triggered by <c-x><c-o>
     vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+    lsp_status.on_attach(client)
 
     -- Mappings.
     -- See `:help vim.lsp.*` for documentation on any of the below functions

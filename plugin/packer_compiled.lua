@@ -89,11 +89,6 @@ _G.packer_plugins = {
     path = "/home/arvinsk/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
   },
-  chadtree = {
-    loaded = true,
-    path = "/home/arvinsk/.local/share/nvim/site/pack/packer/start/chadtree",
-    url = "https://github.com/ms-jpq/chadtree"
-  },
   ["cmp-copilot"] = {
     loaded = true,
     path = "/home/arvinsk/.local/share/nvim/site/pack/packer/start/cmp-copilot",
@@ -152,6 +147,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/arvinsk/.local/share/nvim/site/pack/packer/start/impatient.nvim",
     url = "https://github.com/lewis6991/impatient.nvim"
+  },
+  ["lsp-status.nvim"] = {
+    loaded = true,
+    path = "/home/arvinsk/.local/share/nvim/site/pack/packer/start/lsp-status.nvim",
+    url = "https://github.com/nvim-lua/lsp-status.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -213,6 +213,11 @@ _G.packer_plugins = {
     path = "/home/arvinsk/.local/share/nvim/site/pack/packer/start/nvim-toggleterm.lua",
     url = "https://github.com/akinsho/nvim-toggleterm.lua"
   },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/home/arvinsk/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/arvinsk/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -243,11 +248,6 @@ _G.packer_plugins = {
     path = "/home/arvinsk/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
     url = "https://github.com/simrat39/rust-tools.nvim"
   },
-  ["tabby.nvim"] = {
-    loaded = true,
-    path = "/home/arvinsk/.local/share/nvim/site/pack/packer/start/tabby.nvim",
-    url = "https://github.com/nanozuki/tabby.nvim"
-  },
   tagbar = {
     loaded = true,
     path = "/home/arvinsk/.local/share/nvim/site/pack/packer/start/tagbar",
@@ -272,6 +272,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/arvinsk/.local/share/nvim/site/pack/packer/start/vim-hjson",
     url = "https://github.com/hjson/vim-hjson"
+  },
+  vimtex = {
+    loaded = true,
+    path = "/home/arvinsk/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
   }
 }
 
